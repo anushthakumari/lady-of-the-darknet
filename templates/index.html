@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lady of the Darknet</title>
+		<link rel="stylesheet" href="/static/styles.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="app-section">
+				<img alt="Dark web data Leak Monitoring Logo" src="/static/logo.png" />
+				<h1 class="app-title">Lady of the Darknet</h1>
+				<h4 class="app-desc">Tracking data leaks on the dark web</h4>
+			</div>
+			<section class="leak-section">
+				<h1>Company Database Leaked So Far</h1>
+				<div class="cards">
+					{% for item in data %}
+					<div class="card">
+						<h2>{{ item.company_name }}</h2>
+						<p><strong>Attacker Group:</strong> {{ item.tag }}</p>
+						<p>
+							<strong>Data Size:</strong> {{ item.data_size if item.data_size
+							else 'N/A' }}
+						</p>
+					</div>
+					{% endfor %}
+				</div>
+			</section>
+		</div>
+	</body>
+	<footer>
+		<p>
+			A project by
+			<a href="https://github.com/anushthakumari" target="_blank"
+				>Anushtha Pandit</a
+			>
+		</p>
+	</footer>
+</html>

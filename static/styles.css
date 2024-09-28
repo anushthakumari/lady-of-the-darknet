@@ -1,0 +1,127 @@
+:root {
+    --bg: #364149;
+    --txt: #6ad37a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1800px;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--txt);
+}
+
+.app-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+}
+
+.app-section img {
+    height: 30vh;
+}
+
+.app-title {
+    width: 100%;
+    font-size: 5rem;
+    color: var(--txt);
+}
+
+.app-desc {
+    font-size: 2em;
+    color: var(--txt);
+}
+
+.leak-section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.leak-section h1 {
+    font-size: 2.2rem;
+    text-decoration: underline;
+}
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+strong {
+    color: #333;
+}
+
+footer {
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    color: var(--txt);
+}
+
+footer a {
+    color: var(--txt);
+    font-size: 2rem;
+}
